@@ -74,3 +74,26 @@ div.item.green {
 div.item.green i {
   color: #16a085;
 }
+
+/* changing opacity of the img then div is hover */
+div.item:hover img {
+  opacity: 0.3;
+  filter: grayscale(100%);
+}
+
+/* catch them all */
+div.item * {
+  transition: all 0.5s ease-in-out;
+}
+
+/* icons does't show until hover */
+/* moving icons to the center */
+div.item i {
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 1s 0ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+div.item:hover i {
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 1s 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
